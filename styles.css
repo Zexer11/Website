@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.jpeg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+.card {
+    width: 75vw; /* 75% of the viewport width */
+    height: 75vh; /* 75% of the viewport height */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    background: white; /* Solid white background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    box-sizing: border-box;
+}
+
+.card-left, .card-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.card-left {
+    text-align: center;
+}
+
+.card-left h1 {
+    font-size: 3em; /* Big font size for the header */
+    margin: 0;
+    position: absolute;
+    top: 1cm; /* 1 cm from the top of the card */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-left p {
+    font-size: 1.2em; /* Smaller text below the header */
+    margin: 0;
+    position: absolute;
+    top: calc(1cm + 3cm); /* 3 cm below the header */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.click-message {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 2cm;
+    position: absolute;
+    bottom: 1cm;
+    left: 50%;
+    transform: translateX(-50%);
+    color: grey; /* Subtle color */
+}
+
+.card-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-image {
+    width: 100%; /* Adjust to fit the right side */
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-image:hover {
+    opacity: 0.8;
+}
